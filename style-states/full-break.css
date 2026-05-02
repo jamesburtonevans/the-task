@@ -1,0 +1,46 @@
+:root {
+    /* Colors */
+    --color-dark: rgb(255, 255, 255);
+    --color-med-dark: rgb(150, 150, 150);
+    --color-light-dark: rgb(100, 100, 100);
+    --color-light: rgb(50, 50, 50);
+    --color-light-light: rgb(0, 0, 0);
+    --color-background: rgb(0, 0, 0);
+    --color-background-light: rgb(0, 0, 0);
+    --color-shadow-l: rgb(0, 0, 0, 0.1);
+    --color-shadow-m: rgb(0, 0, 0, 0.5);
+    --color-shadow-d: rgb(0, 0, 0, 0.8);
+    --color-lighten-l: rgb(255, 255, 255, 0.1);
+
+    /* Font Families */
+    --font-serif: mono;
+    --font-sans: mono;
+
+    /* Sizes */
+    --size-sss: 0.25rem;
+    --size-ss: 0.5rem;
+    --size-s: 0.65rem;
+    --size-m: 0.8rem;
+    --size-l: 1rem;
+    --size-ll: 1.25rem;
+    --size-lll: 1.5rem;
+    --size-h3: 1rem;
+    --size-h2: 1rem;
+    --size-h1: 2rem;
+    --size-title: 3rem;
+
+    /* Border Radius */
+    --border-radius-s: 0rem;
+    --border-radius-m: 0rem;
+    --border-radius-l: 3rem;
+
+    /* Padding */
+    --padding-ss: 0.1rem;
+    --padding-s: 0.5rem;
+    --padding-m: 0rem;
+    --padding-l: 3rem;
+
+    /* Transition */
+    --transition-s: 0s;
+    --transition-m: 0s;
+}
