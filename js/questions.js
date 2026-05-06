@@ -1,4 +1,4 @@
-function question(id, section, text, alteredText, answerType, options) {
+function question(id, section, text, alteredText, answerType, options, alteredOptions) {
   return {
     id,
     section,
@@ -6,6 +6,7 @@ function question(id, section, text, alteredText, answerType, options) {
     alteredText,
     answerType,
     options,
+    alteredOptions,
     answer: null,
   };
 }
@@ -33,12 +34,21 @@ export const questions = [
       "55-64",
       "65 or older",
     ],
+    [
+      "Roughly 65 years",
+      "Roughly 60 years",
+      "Roughly 50 years",
+      "Roughly 40 years",
+      "Roughly 30 years",
+      "Roughly 20 years",
+      "Roughly 15 years",
+    ],
   ),
   question(
     3,
     "Getting to know you",
     "What is your occupation?",
-    "What is your main distraction?",
+    "What title do you reduce your existence to?",
     "free-response",
   ),
   question(
@@ -52,7 +62,7 @@ export const questions = [
     5,
     "The people in your life",
     "Who knows you best?",
-    "Who are you performing for?",
+    "Who have you never been enough for?",
     "free-response",
   ),
   question(
@@ -66,14 +76,14 @@ export const questions = [
     7,
     "Your body and self",
     "When did you last feel fully present in your body?",
-    "When did you last feel you deserved to be here?",
+    "When did you last feel that your body was actually yours?",
     "free-response",
   ),
   question(
     8,
     "Your body and self",
     "What is one way you've treated your body well today?",
-    "How did you most recently need to convince yourself you're actually real?",
+    "What did you last do to keep believing you need fixing?",
     "free-response",
   ),
   question(
@@ -93,15 +103,15 @@ export const questions = [
   question(
     11,
     "What you're doing",
-    "What do you spend most of your money on?",
+    "What do you spend most of your money on, beyond the necessities?",
     "What are you substituting for meaning?",
     "free-response",
   ),
   question(
     12,
     "What you're doing",
-    "What is the last thing you do before bed?",
-    "How will you spend your last moments?",
+    "What is the last thing you did before bed last night?",
+    "How will you have spent your last moments?",
     "free-response",
   ),
   question(
@@ -115,7 +125,7 @@ export const questions = [
     14,
     "What you're moving toward",
     "What does your ideal life look like?",
-    "When will you give yourself permission to start living?",
+    "What does your life need to look like before you give yourself permission to start living?",
     "free-response",
   ),
   question(

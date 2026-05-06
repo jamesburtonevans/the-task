@@ -8,7 +8,7 @@ export function renderHeader() {
     container.className = "title-container";
 
     title.textContent = "The Task";
-    subtitle.textContent = "Discover your True purpose in just 10 minutes";
+    subtitle.textContent = "Discover your True purpose in just 5 minutes";
 
     container.appendChild(title);
     container.appendChild(subtitle);
@@ -21,4 +21,13 @@ export function renderProgressDiv() {
     container.classList.add('hidden');
     container.appendChild(renderProgress());
     return container;
+}
+
+export function mobileWarning() {
+  const container = document.createElement('div');
+  container.className = "mobile-warning";
+  const warning = document.createElement('p');
+  warning.textContent = "This experience is not intended for mobile/smaller screens. Please use a desktop to get the full experience.";
+  container.appendChild(warning);
+  return container;
 }

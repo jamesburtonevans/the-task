@@ -5,16 +5,16 @@
     --color-light-dark: rgb(142, 132, 119);
     --color-light: rgb(193, 181, 164);
     --color-light-light: rgb(207, 205, 192);
-    --color-background: rgb(223, 221, 207);
-    --color-background-light: rgb(231, 230, 218);
+    --color-background: rgb(207, 205, 192);
+    --color-background-light: rgb(207, 205, 192);
     --color-shadow-l: rgb(0, 0, 0, 0.1);
     --color-shadow-m: rgb(0, 0, 0, 0.5);
     --color-shadow-d: rgb(0, 0, 0, 0.8);
     --color-lighten-l: rgb(255, 255, 255, 0.1);
 
     /* Font Families */
-    --font-serif: "Instrument Serif";
-    --font-sans: "Instrument Sans";
+    --font-serif: mono;
+    --font-sans: mono;
 
     /* Sizes */
     --size-sss: 0.5rem;
@@ -35,10 +35,10 @@
     --border-radius-l: 3rem;
 
     /* Padding */
-    --padding-ss: 0.1rem;
-    --padding-s: 0.5rem;
-    --padding-m: 1rem;
-    --padding-l: 3rem;
+    --padding-ss: 0.3rem;
+    --padding-s: 0.1rem;
+    --padding-m: 0.35rem;
+    --padding-l: 1rem;
 
     /* Transition */
     --transition-s: 0s;
@@ -46,5 +46,10 @@
 }
 
 * {
-    box-shadow: none;
+    box-shadow: none !important;
+    font-weight: normal !important;
+    text-decoration: none !important;
+    font-style: normal !important;
+    text-align: left !important;
+    justify-content: left !important;
 }

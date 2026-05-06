@@ -1,4 +1,4 @@
-import { getProgress, incrementProgress, changeOnQuestion } from "./state.js";
+import { getProgress, incrementProgress, changeOnQuestion, lastQuestionSubmit } from "./state.js";
 
 // Render question
 export function renderQuestion(question) {
@@ -100,7 +100,7 @@ export function renderQuestion(question) {
   // Handle submit button behavior
   submitButton.addEventListener("click", function () {
     // Run change on target questions
-    if (question.answerType === "free-response") {
+    if (question.answerType === "free-response" && question.id != 15) {
       if (textarea.value.length < 1) {
         console.log("Please provide an answer");
         return;
@@ -112,8 +112,6 @@ export function renderQuestion(question) {
         answerText.textContent = question.answer;
         textContainer.appendChild(answerText);
         changeOnQuestion();
-        incrementProgress();
-        updateProgress();
       }
     }
     if (question.answerType === "multiple-choice") {
@@ -125,8 +123,6 @@ export function renderQuestion(question) {
         container.classList.remove('active');
         submitButton.classList.add('hidden');
         changeOnQuestion();
-        incrementProgress();
-        updateProgress();
       }
     }
 
@@ -155,7 +151,13 @@ export function renderQuestion(question) {
     if (nextActive) {
       nextActive.scrollIntoView({ behavior: "smooth", block: "center" });
     }
+    incrementProgress();
+    updateProgress();
+    if (question.id >= 15) {
+      lastQuestionSubmit();
+    }
   });
+
 
   return container;
 }
@@ -251,4 +253,11 @@ function updateProgress() {
   const progressNumber = document.querySelector(".progress p");
   progressNumber.textContent = `${getProgress()}%`;
   document.querySelector(".bar-complete").style.width = `${getProgress()}%`;
+}
+
+export function renderFinalQuestion() {
+  const container = document.createElement('p');
+  container.className = "final-question";
+  container.textContent = "What are you grasping for that you don't already have?"
+  return container;
 }

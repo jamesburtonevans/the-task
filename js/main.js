@@ -1,3 +1,4 @@
+import { mobileWarning } from './static.js';
 import { renderHeader } from './static.js';
 import { renderProgressDiv } from './static.js';
 import { questions } from './questions.js';
@@ -6,6 +7,7 @@ import { addQuestionsToSections, renderStartButton, renderProgress } from './ren
 const main = document.querySelector('main');
 const questionsContainer = addQuestionsToSections(questions);
 
+main.appendChild(mobileWarning());
 main.appendChild(renderHeader());
 main.appendChild(renderProgressDiv());
 main.appendChild(renderStartButton(questionsContainer));
